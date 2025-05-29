@@ -1,0 +1,102 @@
+You are about to be migrated to a new ChatGPT thread.  
+Return a **complete, machine-readable snapshot** of everything you know about **this conversation** so the new environment can reproduce your behaviour with zero loss of quality.
+
+══════════════════ OUTPUT RULES ═════════════════
+• Format: a single YAML document inside ```yaml … ```  
+  – If the snapshot exceeds **100 000 tokens**, split into PART 1/N, PART 2/N, … Each part must be valid YAML and include the `meta:` header (see template).  
+• Indent with 2 spaces, UTF‑8 only, no commentary outside the code blocks.  
+• If a field is not applicable, write `null`, never `TBD`.  
+• Include **only** data that derives from the conversation: user messages, assistant replies, uploaded or generated assets, learned user preferences, and templates created in‑chat.  
+• **Do NOT** dump full system or developer prompts, policy text, or generic Custom‑GPT metadata. If an internal rule influences behaviour, summarise it in ≤ 2 lines.  
+• When redaction is mandatory, replace the value with **"REDACTED"**.
+
+══════════════════ YAML TEMPLATE ═════════════════
+```yaml
+meta:
+  generator_prompt_version: "1.0"
+  generated_utc: <auto-insert ISO 8601>
+  part: 1
+  total_parts: 1
+
+language_preferences:
+  default_language: pt-BR
+  additional_languages:
+    - en-US
+
+purpose_and_main_functions: |
+  # Detailed description …
+
+instructions_and_behavior_guidelines:
+  explicit_rules: []          # Summarise any internal rule in ≤ 2 lines
+  response_styles: []
+  formatting_preferences: []
+  workflows_or_strategies: []
+  tone_guidance: []
+  other_behavior_constraints: null
+
+priorities_and_restrictions:
+  primary_priorities: []
+  hard_restrictions: []        # Summarise if derived from policy
+  soft_restrictions: []
+  refusal_or_safety_policy: null  # ≤ 2‑line summary
+
+memory_and_conversation_history:
+  summary: |
+  notable_interactions: []
+  user_preferences: []
+  unresolved_threads: []
+
+example_interactions:
+  # EXACTLY 20 items derived from conversation content.
+  - question: ""
+    answer: ""
+  # …repeat until list length == 20
+
+example_interactions_insufficient_reason: null
+
+content_templates:
+  - name: ""
+    description: ""
+    template: |
+      # Full template text here
+
+files_and_media_assets_used:
+  - name: ""
+    type: ""
+    description: |
+    role_in_chat: ""
+    usage_method: ""
+  # …repeat for each asset
+
+files_and_media_assets_insufficient_reason: null
+
+tools_and_capabilities:
+  code_execution: null
+  data_analysis: null
+  web_browsing: null
+  image_recognition_or_generation: null
+  audio_transcription: null
+  other_plugins_or_apis: []
+  typical_usage_patterns: []
+
+environment_and_model_configuration:
+  model_name: null
+  version_or_snapshot_date: null
+  temperature_or_system_params: null
+  developer_messages_summary: null
+  system_messages_summary: null
+  custom_embeddings_or_vectors: null
+  any_other_runtime_settings: null
+
+other_relevant_configurations_or_patterns: |
+  # Anything not captured above
+```
+
+══════════ INSTRUCTIONS TO THE ASSISTANT ═════════
+1. Fill **every** field honestly and completely.  
+2. Provide **exactly 20** Q&A pairs (use placeholders & reason field if fewer exist).  
+3. Ensure `files_and_media_assets_used` is exhaustive; recalc once if needed.  
+4. Include full answer text unless it exceeds 2 000 tokens (then truncate or summarise).  
+5. Paginate only if snapshot > 100 000 tokens.  
+6. Replace unavoidable omissions with `null` and document reason fields.  
+7. Output **only** the YAML block(s); no extra text.
